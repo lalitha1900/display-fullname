@@ -35,10 +35,11 @@ export default function App() {
         </button>
         <br />
         <br />
-        <div id="fullName" style={{ display: "none" }}>
+       
+      </form>
+      <div id="fullName" style={{ display: "none" }}>
           Full Name:
         </div>
-      </form>
     </div>
   );
 }
