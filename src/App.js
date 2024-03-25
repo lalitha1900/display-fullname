@@ -6,12 +6,17 @@ export default function App() {
     const lastName = document.getElementsByName("lastName")[0].value;
     //alert(firstName + " " + lastName);
     if (firstName === "" || lastName === "") {
-      document.getElementById("fullName").style.display = "none";
+      if(document.getElementById("fullName")!=null)
+      document.getElementById("fullName").remove();
       return;
     }
-    document.getElementById("fullName").style.display = "block";
-    document.getElementById("fullName").innerHTML =
+    var divEle = document.createElement("div");
+    divEle.id = "fullName";
+   // document.getElementById("fullName").style.display = "block";
+    //document.getElementById("fullName").innerHTML =
+    divEle.innerHTML=
       "Full Name: " + firstName + " " + lastName;
+      document.getElementById("formId").after(divEle);
   }
   function submit(event) {
     event.preventDefault();
